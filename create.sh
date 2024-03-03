@@ -10,4 +10,7 @@ while [ -d "$new_folder_name" ]; do
   suffix=$((suffix + 1))
 done
 
+datetime=$(date +"%Y-%m-%d %H:%M:%S")
+echo "| $datetime created topic **$folder_name**" >> history.md
+echo "" 
 mkdir "$new_folder_name"
