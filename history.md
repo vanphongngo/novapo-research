@@ -3,3 +3,4 @@
 | 2024-03-04 21:51:41 created topic **nx-pnpm-part2**
 
 - when create a pnpm workspace. it not intall nodemodules when create an project
+| 2024-03-06 21:58:02 created topic **regex-research**
