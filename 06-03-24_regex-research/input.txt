@@ -1,0 +1,19 @@
+hellor helloooor hellr
+.
+k[ae]a
+k[^ae]a
+[a-w]
+ka*
+hello?
+hello+
+hello*
+--
+
+hellor helloooor hellr
+
+
+hellorhelloooorhellr
+
+hellohellohell
+hellohelloooo
+hellohelloooohell

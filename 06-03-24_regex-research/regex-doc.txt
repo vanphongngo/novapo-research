@@ -1,0 +1,17 @@
+- basic matchers / type anyword to match
+- [^something] / set of charactes to ignore
+- [something] / set of charactes to match
+- [a-z] charactes range to match
+
+asterisk * 
+*e | can not match or match many time
+
+plus sign +
++e | can match one or many times
+
+question mark ? - 
+be?r | match one or not match
+
+curly brace
+be{2}r | find the word that start with e and end with r and has two "e" charactes 
+
