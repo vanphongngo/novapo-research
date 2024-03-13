@@ -1,19 +1,5 @@
-hellor helloooor hellr
-.
-k[ae]a
-k[^ae]a
-[a-w]
-ka*
-hello?
-hello+
-hello*
+2019-12-12
+\d{4}-\d{2}
 --
 
-hellor helloooor hellr
-
-
-hellorhelloooorhellr
-
-hellohellohell
-hellohelloooo
-hellohelloooohell
+2019-12

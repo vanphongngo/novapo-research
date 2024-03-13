@@ -1,0 +1,27 @@
+
+
+ha-ha,haa-haa
+.
+k[ae]a
+k[^ae]a
+[a-w]
+ka*
+hello?
+hello+
+hello*
+space
+,
+(ha)-\1,(haa)-\2
+--
+
+h a - h a , h a a - h a a 
+
+
+h a h a h a a h a a 
+
+
+
+
+
+, 
+ha-ha,haa-haa

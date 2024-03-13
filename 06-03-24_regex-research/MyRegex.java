@@ -31,6 +31,7 @@ public class MyRegex  {
                 Matcher matcher = pattern.matcher(sentence);
                 while (matcher.find()) {
                     resultBuilder.append(matcher.group());
+                    resultBuilder.append(" ");
                 }
                 resultBuilder.append("\n");
             }

@@ -13,5 +13,35 @@ question mark ? -
 be?r | match one or not match
 
 curly brace
-be{2}r | find the word that start with e and end with r and has two "e" charactes 
+be{2}r |  has two "e" charactes 
+be{3,}r |  "e" at least three times
+be{1,3}r |  "e" from 1 to 3
 
+paratheses () - grouping, 
+nhóm lại các phần tử
+
+ví dụ:
+(ha)-\1,(haa)-\2
+nghĩa là
+(ha)-(ha), (haa)-(haa)
+dấu \1 \2 nghĩa là ref cái biểu thức trong ngoặc trước đó, thay vì viết lại
+mục đích của (): khi tìm một string có pattern khác nhau, ví dụ tìm các email có kiểu là 
+
+{tên email}.work@{loại email}.vn
+
+thì ta sẽ có biểu thức regex như sau:
+
+([a-z,0-9]+).work@\1.vn
+
+group the expression => need research further
+
+Parentheses (?: ): Non-capturing Grouping
+
+{name}.work@{orgainer}.{domain}.vn
+
+
+// tham khao
+https://www.youtube.com/watch?v=YGpWSC8Kxvk
+/g - global search
+/i - ko phan biet hoa thuong
+/m - tim kiem tren nhieu dong

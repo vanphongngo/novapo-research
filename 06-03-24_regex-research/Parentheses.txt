@@ -1,0 +1,9 @@
+nn.work@gm.com.vn n1.work@gmail.com hello.work@g.com.vn  nova.work@gmail.com.work@gmail.com hienly.work@gmail..dev.com uno.dev@gmail.com hello.work@gmail.com
+[a-z]+.work@[a-z]+.[a-z]+.vn
+([a-z]+).work@([a-z]+).([a-z]+).vn
+([a-z]+).work@gmail.com
+--
+
+nn.work@gm.com.vn hello.work@g.com.vn 
+nn.work@gm.com.vn hello.work@g.com.vn 
+nova.work@gmail.com hello.work@gmail.com
