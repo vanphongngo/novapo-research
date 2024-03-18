@@ -10,3 +10,4 @@
 | 2024-03-13 14:38:21 created topic **autoconfig-spring-boot-framework**
 | 2024-03-13 16:14:41 created topic **spring-boot-from-scratch**
 | 2024-03-13 16:17:39 created topic **java-application-maven-from-scratch**
+| 2024-03-14 16:34:54 created topic **try-mockito**
