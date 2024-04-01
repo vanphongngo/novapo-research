@@ -1,7 +1,10 @@
 package org.beint.beintappapi.web.rest.v1;
 
+import jakarta.annotation.PostConstruct;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.ObjectUtils;
 import org.beint.beintappapi.dto.CreateProductDto;
 import org.beint.beintappapi.dto.ProductDto;
 import org.beint.beintappapi.dto.UpdateProductDto;
@@ -13,17 +16,25 @@ import org.beint.beintappapi.service.product.ProductDeletionService;
 import org.beint.beintappapi.service.product.ProductRetrievalService;
 import org.beint.beintappapi.service.product.ProductUpdationService;
 import org.beint.beintappapi.utils.ErrorParser;
+import org.beint.beintappapi.utils.RegexUtils;
+import org.springframework.core.task.AsyncTaskExecutor;
+import org.springframework.core.task.TaskRejectedException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.ExecutorService;
 
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
+@Slf4j
 public class ProductController {
 
     private final ErrorParser errorParser;
@@ -33,8 +44,42 @@ public class ProductController {
     private final ProductUpdationService productUpdationService;
     private  final ProductDeletionService productDeletionService;
 
+    private final List<Integer> threads = new ArrayList<>();
+
+    @PostConstruct
+    public void prepare() {
+        int numberOfElements = 10000;
+        Integer valueToFill = 0;
+
+        for (int i = 0; i < numberOfElements; i++) {
+            threads.add(valueToFill);
+        }
+    }
+
     @GetMapping()
-    public ResponseEntity<PageData<ProductDto>> get(Pageable pageable) {
+    public ResponseEntity<PageData<ProductDto>> get(Pageable pageable) throws InterruptedException {
+        Thread.sleep(1000);
+
+
+//        String num = RegexUtils.getString(
+//                "http-nio-8080-exec-90",
+//                "\\d+$"
+//        );
+//
+//        int threadNumber = -1;
+//
+//        if (ObjectUtils.isNotEmpty(num)) {
+//            threadNumber =  Integer.parseInt(num);
+//            if (threadNumber != -1) {
+//                threads.set(threadNumber,threads.get(threadNumber) + 1);
+//            };
+//        }
+//
+        log.info("get products ");
+
+        TaskRejectedException
+
+
         return new ResponseEntity<>(productRetrievalService.getProducts(pageable), HttpStatus.OK);
     }
 
