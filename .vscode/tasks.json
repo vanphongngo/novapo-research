@@ -9,6 +9,15 @@
           "kind": "build",
           "isDefault": true
         }
+      },
+      {
+        "label": "Build Typescript File",
+        "type": "shell",
+        "command": "cd ${fileDirname} && npx tsc ${file}",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
       }
     ]
   }
