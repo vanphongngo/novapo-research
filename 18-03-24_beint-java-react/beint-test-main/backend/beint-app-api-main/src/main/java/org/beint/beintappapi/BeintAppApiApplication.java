@@ -30,7 +30,6 @@ public class BeintAppApiApplication implements ApplicationListener<ApplicationRe
         System.out.println("SPRING_DATASOURCE_URL: " + environment.getProperty("spring.datasource.url"));
         System.out.println("SPRING_DATASOURCE_USERNAME: " + environment.getProperty("spring.datasource.username"));
         System.out.println("SPRING_DATASOURCE_PASSWORD: " + environment.getProperty("spring.datasource.password"));
-        
         System.out.println("===============================");
     }
 }
